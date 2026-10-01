@@ -1,0 +1,40 @@
+name: Bug report
+description: Something in aituner does not work as it should. (Reporting from the app adds the logs for you.)
+labels: ["bug", "status: new"]
+body:
+  - type: markdown
+    attributes:
+      value: "Thanks for reporting. The quickest way is **Report a bug** in the app: it attaches the details below for you."
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to make it happen again
+      placeholder: "1. ...\n2. ...\n3. ..."
+  - type: input
+    id: version
+    attributes:
+      label: aituner version
+      description: In Settings, under Updates.
+      placeholder: "0.0.1"
+    validations:
+      required: true
+  - type: input
+    id: mac
+    attributes:
+      label: Mac
+      placeholder: "MacBook Air, Apple M2, 16 GB, macOS 26.5"
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log lines (optional)
+      description: From ~/Library/Application Support/aituner/aituner.log. Remove anything private first.
+      render: text
